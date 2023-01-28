@@ -26,7 +26,9 @@ class Server {
         this.app.use(express.static(path.resolve(__dirname, '../public')));
         
         //CORs
-        this.app.use(cors());
+        this.app.use( cors({
+            origin: '*'
+        }));
     }
 
     configurarSockets(){
